@@ -2,7 +2,7 @@
 #include <numeric>
 #include <cstdlib>
 
-// Kolaylýk olsun
+// KolaylÄ±k olsun
 using namespace std;
 
 // Tipik bir C++ fonksiyonu 
@@ -15,7 +15,7 @@ void carp(int n, float *x, float *y, float *z)
 }
 
 
-// Üstteki fonksiyonun CUDA versiyonu
+// Ustteki fonksiyonun CUDA versiyonu
 __global__
 void carp_cuda(int n, float *x, float *y, float *z)
 {
@@ -27,17 +27,17 @@ void carp_cuda(int n, float *x, float *y, float *z)
 
 int main(int argc, char *argv[])
 {
-  // Çok büyük bir sayý belirleyelim
+  // Ã‡ok bÃ¼yÃ¼k bir sayÄ± belirleyelim
   int N = 10000;
 
   float *x_gpu, *y_gpu, *z_gpu, *x_cpu, *y_cpu, *z_cpu;
 
-  // GPU ve CPU tarafýndan ulaþalýbilen memory ayýrtalým
+  // GPU ve CPU tarafindan ulasilabilen memory ayirtalim
   cudaMallocManaged(&x_gpu, N * sizeof(float));
   cudaMallocManaged(&y_gpu, N * sizeof(float));
   cudaMallocManaged(&z_gpu, N * sizeof(float));
 
-  // Sadece CPU tarafýndan ulaþýlabilen memory ayýrtalým
+  // Sadece CPU tarafindan ulasilabilen memory ayirtalim
   x_cpu = new float[N];
   y_cpu = new float[N];
   z_cpu = new float[N];
@@ -51,24 +51,24 @@ int main(int argc, char *argv[])
   }
 
   // Fonksiyonu GPU'da argv[1] blokta ve her blokta argv[2] thread
-  // olacak þekilde çaðýralým
+  // olacak sekilde Ã§agiralÄ±m
   int blok_sayisi = atoi(argv[1]);
   int thread_sayisi = atoi(argv[2]);
 
   carp_cuda<<<blok_sayisi, thread_sayisi>>>(N, x_gpu, y_gpu, z_gpu);
 
-  // GPU'yu bekleyelim de iþini bitirsin, yoksa ortam karýþýr.
+  // GPU'yu bekleyelim de isini bitirsin, yoksa ortam karisir.
   cudaDeviceSynchronize();
 
-  // Normal CPU fonsiyonunu çaðýralým
+  // Normal CPU fonlsiyonunu Ã§agiralÄ±m
   carp(N, x_cpu, y_cpu, z_cpu);
 
-  // Bakalým doðru mu yaptýk?
-  // z_gpu ve z_cpu ayný deðerlere sahip olmasý lazým 
+  // Bakalim dogru mu yaptik?
+  // z_gpu ve z_cpu ayni degerlere sahip olmasÄ± lazim 
   for(int i = 0; i < N; ++i) 
       cout << z_cpu[i] << " " << z_gpu[i] << endl;
 
-  // Release the Kraken - Kraken'ý salýverin gelsin. 
+  // Release the Kraken - Kraken'i saliverin gelsin. 
   cudaFree(x_gpu);
   cudaFree(y_gpu);
   cudaFree(z_gpu);
@@ -78,4 +78,3 @@ int main(int argc, char *argv[])
   
   return 0;
 }
-
