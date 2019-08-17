@@ -2,7 +2,7 @@
 
 YOUTUBE kanalımın reposu 
 
-Youtube kanal linki: https://www.youtube.com/channel/UCdDEW0DeLGrJ0acnp1mw19w
+Youtube kanal linki: https://www.youtube.com/channel/UCKmkhXwZyrmXnxaCyBXJ-Pw
 
 Her hafta yaptığım kodlama videolarının kodlarını burada bulabilirsiniz. Kodlar Google Colab'de calistigi icin tek yapmaniz gereken notebooklari Colab'e import etmek. 
 
