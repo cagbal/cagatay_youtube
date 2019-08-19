@@ -1,4 +1,4 @@
-# robotikci
+# cagatay_youtube
 
 YOUTUBE kanalımın reposu 
 
