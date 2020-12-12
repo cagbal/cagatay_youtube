@@ -1,6 +1,11 @@
 # ARKA PLAN SİLİCİ
 Resimdeki insanları arka plandan ayırarak arka plan yerine şeffaflık(alfa kanalı) ekleyen çok ufak bir flask ile yazılmış websitesi taslağı. 
 
+# Canlı deneyim
+Site şu adreste yayında, isterseniz deneyebilirsiniz. Tabi performans için optimize edilmediği için biraz yavaş çalışıyor.
+
+https://arkaplan-3s77l6k3uq-ew.a.run.app/arka_plan_silici
+
 ### Docker ile çalıştırma (En kolay yöntem)
 ```bash
 git clone https://github.com/cagbal/cagatay_youtube
