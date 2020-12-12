@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file arka_plan_silici_flask/Dockerfile --tag arka_plan_silici:$(date +%s)
+      run: docker build ./arka_plan_silici_flask --file arka_plan_silici_flask/Dockerfile --tag arka_plan_silici:$(date +%s)
