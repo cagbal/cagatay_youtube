@@ -10,3 +10,13 @@ Yorumlarinizi ve sorularinizi video altina veya burada issue acarak bana ulastir
 
 Referanslar:
 Kodların referansları ilgili kodların geçtiği yerlerde veya videolarda bulunmaktadır fakat unuttuğum, eksik bir referans görürseniz, lütfen bana bildirin.  
+
+# Faydalı Linkler 
+
+# Sunucuda Model Çalıştırma Hizmetleri
+Yani modelinizi eğittiniz, bunu insanlığa sunmanıza bir API'a dönüştürmenize olanak sağlayan servisler. 
+
+- tiyaro - https://www.tiyaro.ai/
+- banana - https://www.banana.dev/
+- lightning - https://lightning.ai/
+- HF - https://huggingface.co/
